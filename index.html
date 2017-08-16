@@ -11,17 +11,17 @@
       <a-scene>
         <a-assets>
           <!-- Images. -->
-          <img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
-          <img id="city-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
+          <img id="city" crossorigin="anonymous" src="https://ucarecdn.com/38ffa4d6-247b-4fb5-8c10-76810cfde11b/">
+          <img id="city-thumb" crossorigin="anonymous" src="https://ucarecdn.com/35ed7bcc-4b1e-4869-b22c-e68af6d6b9ab/">
           <img id="cubes-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
           <img id="sechelt-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
           <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
           <img id="cubes" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
-          <img id="sechelt" crossorigin="anonymous" src="https://ucarecdn.com/5e801f26-0f0f-425c-9a79-a9ad58949ec5/">
+          <img id="sechelt" crossorigin="anonymous" src="https://ucarecdn.com/38ffa4d6-247b-4fb5-8c10-76810cfde11b/">
 
           <script id="link" type="text/html">
             <a-entity class="link"
-              geometry="primitive: plane; height: 1; width: 1"
+              geometry="primitive: plane; height: 5; width: 9; depth: 200"
               material="shader: flat; src: ${thumb}"
               event-set__1="_event: mousedown; scale: 1 1 1"
               event-set__2="_event: mouseup; scale: 1.2 1.2 1"
@@ -40,10 +40,8 @@
 
 
         <!-- Link we will build. -->
-        <a-entity id="links" layout="layout: line; margin: 1.5" position="-3 -1 -4">
+        <a-entity id="links" layout="layout: line; margin: 1.5" position="-3 -1 -4" rotation = "0 0 0">
           <a-entity template = "src: #link" data-src = "#city" data-thumb = "#city-thumb"></a-entity>
-          <a-entity template = "src: #link" data-src = "#cubes" data-thumb = "#cubes-thumb"></a-entity>
-          <a-entity template = "src: #link" data-src = "#sechelt" data-thumb = "#sechelt-thumb"></a-entity>
         </a-entity>
 
         <!-- Camera + Cursor. -->
