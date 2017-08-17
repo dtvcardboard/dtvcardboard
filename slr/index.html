@@ -1,3 +1,4 @@
+
 <html>
   <head>
     <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
@@ -6,6 +7,8 @@
     <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
     <script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
 
     <script src="set-image.js"></script>
 
@@ -21,7 +24,7 @@
 
         <!-- 360-degree image. -->
         <a-sky id="image-360" radius="10" src="#midair"></a-sky>
-
+        <img id = "clip" crossorigin = "anonymous" src = "https://ucarecdn.com/cd352824-4876-4c1e-a6a5-9b88f88298a8/"
 
 
         <!-- Link we will build. -->
@@ -34,14 +37,15 @@
                 event-set__3="_event: click; _target: #main-video; visible: true"
                 event-set__4="_event: click; visible:false"
 
-                ></a-entity>
+        ></a-entity>
+
 
         <a-plane id="main-video"
-        width = "4" height = "2"
-        position="0 1.15 -5"
-        visible="false"
-
-
+          material = "shader:gif;src:url(clip.gif);"gif=""
+          width = "6" height = "3"
+          src = "#clip"
+          position="0 0 -5"
+          visible="false"
         ></a-plane>
 
         <!-- Camera + Cursor. -->

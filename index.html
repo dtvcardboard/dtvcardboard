@@ -13,14 +13,15 @@
       <a-scene>
         <a-assets>
           <!-- Images. -->
-          <img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
+          <img id="city" crossorigin="anonymous" src="https://ucarecdn.com/c2f888ca-e401-46db-955b-663a64e75600/">
+          <img id="mountains" crossorigin="anonymous" src="https://ucarecdn.com/4da55bf7-f602-417e-a1ca-bb6710fd8aec//">
           <img id="card1" crossorigin="anonymous" src="https://ucarecdn.com/9fad09bc-17dd-43ca-9684-287bebd5eb0d/">
           <img id="card2" crossorigin="anonymous" src="https://ucarecdn.com/9c385c86-2f75-4e07-92f7-5e3e041708cd/">
           <img id="card3" crossorigin="anonymous" src="https://ucarecdn.com/e0c3ebb7-285e-4778-ad1c-d0244d692b81/">
           <img id="card4" crossorigin="anonymous" src="https://ucarecdn.com/409918c3-fefa-41f6-a433-fc7ce2dfd5bd/">
           <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
-          <img id="cubes" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
-          <img id="sechelt" crossorigin="anonymous" src="https://ucarecdn.com/38ffa4d6-247b-4fb5-8c10-76810cfde11b/">
+          <img id="cubes" crossorigin="anonymous" src="https://ucarecdn.com/a05b5362-0951-4758-a3c9-4d09d18d3a6a/">
+          <img id="sechelt" crossorigin="anonymous" src="https://ucarecdn.com/0185d251-1452-40d9-8197-4a5c2a885bbe/">
 
           <script id="link" type="text/html">
             <a-entity class="link"
@@ -45,14 +46,18 @@
         <!-- Link we will build. -->
         <a-entity id="links" layout="layout: line; margin: 2.2" position="-1 0 -4">
           <a-entity template = "src: #link" data-src = "#city" data-thumb = "#card1"></a-entity>
-          <a-entity template = "src: #link" data-src = "#cubes" data-thumb = "#card2"></a-entity>
-
+          <a-entity template = "src: #link" data-src = "#sechelt" data-thumb = "#card2"></a-entity>
         </a-entity>
 
         <a-entity id="links" layout="layout: line; margin: 2.2" position="-1 -1.2 -4">
           <a-entity template = "src: #link" data-src = "#city" data-thumb = "#card3"></a-entity>
-          <a-entity template = "src: #link" data-src = "#cubes" data-thumb = "#card4"></a-entity>
+          <a-entity template = "src: #link" data-src = "#mountains" data-thumb = "#card4"></a-entity>
         </a-entity>
+
+
+
+
+
 
         <!-- Camera + Cursor. -->
         <a-entity camera look-controls>
